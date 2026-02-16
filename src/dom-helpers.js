@@ -27,5 +27,19 @@ export const renderProducts = (products) => {
 
 
 export const renderProductDetails = (product) => {
+    const productsDetails = document.querySelector('#product-details');
+    const img = document.querySelector('#product-thumbnail');
+    const productTitleH2 = document.querySelector('#product-title');
+    const productPriceP = document.querySelector('#product-price');
+    const productDescriptionP = document.querySelector('#product-description');
+    const productRatingP = document.querySelector('#product-rating');
 
+    productsDetails.classList.remove('hidden');
+
+    productTitleH2.textContent = product.title;
+    img.src = product.thumbnail;
+    img.alt = product.title;
+    productPriceP.textContent = product.price;
+    productDescriptionP.textContent = product.description;
+    productRatingP.textContent = product.rating;
 };
